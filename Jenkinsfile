@@ -4,7 +4,7 @@ try {
     def gitSourceRef=env.GIT_SOURCE_REF
     def project=""
     def projectVersion=""
-    node("jenkins-slave-npm") {
+    node("maven") {
         stage("Initialize") {
             project = env.PROJECT_NAME
             echo "appName: ${appName}"
